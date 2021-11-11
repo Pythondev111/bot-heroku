@@ -8,8 +8,9 @@ import logging
 import requests
 from googletrans import Translator
 from aiogram import Bot,Dispatcher,executor,types
+import os
 tokenn = '1900084854:AAGQmTzjuJqqI-Sofko0IPQ0wEQqtQk3OAA'
-
+tokenn = str(os.environ.get("BOT_TOKEN"))
 
 
 
