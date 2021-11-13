@@ -10,14 +10,6 @@ from googletrans import Translator
 from aiogram import Bot,Dispatcher,executor,types
 import os
 tokenn = '1900084854:AAGQmTzjuJqqI-Sofko0IPQ0wEQqtQk3OAA'
-tokenn = str(os.environ.get("BOT_TOKEN"))
-
-
-
-
-
-
-
 logging.basicConfig(level=logging.INFO)
 
 bot = Bot(token=tokenn)
@@ -38,10 +30,6 @@ async def message_javob(message: types.Message):
 
     if til == 'uz':
         await message.reply(translator.translate(message.text, src='uz',dest='ru').text)
-
-
-
-
     else:
         dest = 'ru'
         await message.reply(translator.translate(message.text, dest).text)
